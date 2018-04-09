@@ -2,10 +2,10 @@
  * Created by Dheeraj Kumar Barnwal on 08/04/18.
  */
 public class LLReverse {
-    static class Node{
+    static private class Node{
         int data;
         Node next;
-        public Node(int d){
+        private Node(int d){
             data=d;
             next=null;
         }
