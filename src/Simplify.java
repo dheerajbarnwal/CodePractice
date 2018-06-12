@@ -6,11 +6,12 @@ import java.util.Stack;
  */
 public class Simplify {
     public static String simplify(String s){
-        String res="";
+        StringBuilder res = new StringBuilder() ;
         Stack<Integer> st = new Stack<>();
         int prev;
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)=='('){
+
                 /*check operators just before starting of bracket means '('.
                  If operator is -, we need to toggle all operators inside the bracket
                  So, here I have used 0 and 1 in stack to indicate if an operator comes inside this bracket need to toggle or not in the result.
@@ -37,20 +38,20 @@ public class Simplify {
                     st.push(0);
                 }
             }else if(Character.isLetter(s.charAt(i))){
-                res+=s.charAt(i);
+                res.append(s.charAt(i));
             }else if(s.charAt(i)==')'){
                 st.pop();
             }else if(!st.isEmpty() && st.peek()==1){  // Toggle here on the basis of top of stack
                 if(s.charAt(i)=='-'){
-                    res+='+';
+                    res.append('+');
                 }else{
-                    res+='-';
+                    res.append('-');
                 }
             }else{
-                res+=s.charAt(i);
+                res.append(s.charAt(i));
             }
         }
-        return res;
+        return res.toString();
     }
     public static void main(String args[]){
         String s1="((a+b-c))";
