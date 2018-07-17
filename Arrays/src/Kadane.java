@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 /**
+ * Kadane’s Algorithm
  * Given an array containing both negative and positive integers. Find the contiguous sub-array with maximum sum.
- * https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0
  */
 public class Kadane {
     public static int maxSum(int a[],int n){
