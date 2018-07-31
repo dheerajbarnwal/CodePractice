@@ -6,7 +6,7 @@ import java.util.Stack;
  * print all the LEADERS in the array. An element is leader if it is greater than all the elements to its right side. The rightmost element is always a leader.
  */
 public class LeadersInArray {
-    private static Stack maxSumInc(int a[],int n){
+    private static Stack leaders(int a[],int n){
         Stack<Integer> st = new Stack<>();
         int currLead = -1;
         for(int i=n-1;i>=0;i--){
@@ -29,7 +29,7 @@ public class LeadersInArray {
             for(int j=0;j<n;j++){
                 a[j] = sc.nextInt();
             }
-            ans = maxSumInc(a,n);
+            ans = leaders(a,n);
             while(!ans.isEmpty()) {
                 System.out.print(ans.pop() + " ");
             }
