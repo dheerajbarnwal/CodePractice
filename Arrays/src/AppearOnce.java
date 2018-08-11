@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Find the element that appears once in sorted array
+ * Find the element that appears once in sorted array (logn solution)
  * Given a sorted array of integers, every element appears twice except for one. Find that single one in linear time complexity and without using extra memory.
  */
 public class AppearOnce {
