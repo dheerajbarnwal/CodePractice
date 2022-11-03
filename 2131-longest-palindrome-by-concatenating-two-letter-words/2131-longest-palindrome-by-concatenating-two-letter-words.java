@@ -15,7 +15,8 @@ class Solution {
                 continue;
             }
             hm.put(a,hm.get(a)-1);
-            String b = reverse(a);
+            
+            String b = "" + a.charAt(1) + a.charAt(0);
             if(hm.containsKey(b) && hm.get(b)>0){
                 ans+=4;
                 hm.put(b,hm.get(b)-1);
@@ -24,13 +25,5 @@ class Solution {
             }
         }
         return Math.max(ans+min,min);
-    }
-    
-    String reverse(String a){
-        char[] t = a.toCharArray();
-        char temp = t[0];
-        t[0]=t[1];
-        t[1]=temp;
-        return String.valueOf(t);
     }
 }
