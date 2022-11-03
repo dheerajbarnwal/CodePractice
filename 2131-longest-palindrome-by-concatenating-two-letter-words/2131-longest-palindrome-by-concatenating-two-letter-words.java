@@ -16,14 +16,10 @@ class Solution {
             }
             hm.put(a,hm.get(a)-1);
             String b = reverse(a);
-            int fl=0;
             if(hm.containsKey(b) && hm.get(b)>0){
                 ans+=4;
-                //hm.put(a,1);
                 hm.put(b,hm.get(b)-1);
-                fl=1;
-            }
-            if(fl==0 && a.equals(b)){
+            }else if(a.equals(b)){
                 min=2;
             }
         }
