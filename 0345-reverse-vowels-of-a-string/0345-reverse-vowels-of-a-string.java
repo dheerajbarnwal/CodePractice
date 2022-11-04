@@ -8,11 +8,9 @@ class Solution {
         while(i<j){
             if(!vow.contains(ch[i])){
                 i++;
-            }
-            if(!vow.contains(ch[j])){
+            } else if(!vow.contains(ch[j])){
                 j--;
-            }
-            if(vow.contains(ch[i]) && vow.contains(ch[j])){
+            } else if(vow.contains(ch[i]) && vow.contains(ch[j])){
                 char temp = ch[i];
                 ch[i]=ch[j];
                 ch[j]=temp;
