@@ -35,14 +35,15 @@ class Solution {
     }
 
     boolean isSame(char a, char b) {
-        if (Character.toUpperCase(a) == Character.toUpperCase(b)) {
-            if (Character.isLowerCase(a) && !Character.isLowerCase(b)) {
-                return true;
-            }
-            if (Character.isLowerCase(b) && !Character.isLowerCase(a)) {
-                return true;
-            }
-        }
-        return false;
+        // if (Character.toUpperCase(a) == Character.toUpperCase(b)) {
+        //     if (Character.isLowerCase(a) && !Character.isLowerCase(b)) {
+        //         return true;
+        //     }
+        //     if (Character.isLowerCase(b) && !Character.isLowerCase(a)) {
+        //         return true;
+        //     }
+        // }
+        // return false;
+        return Math.abs(a - b) == 32;
     }
 }
