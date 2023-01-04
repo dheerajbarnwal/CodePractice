@@ -12,12 +12,10 @@ class Solution {
             if(val==1){
                 return -1;
             }
-            int rem = val%3;
-            if(rem==0){
+            if(val%3==0){
                 ans+=val/3;
             }else{
-                ans+=val/3;
-                ans+=1;
+                ans+=val/3+1;
             }
             
         }
