@@ -42,8 +42,6 @@ class Solution {
             
             int count2 = map2.getOrDefault(arr2[i],0);
             map2.put(arr2[i],count2+1);
-            
-            
         }
         
         for(int key: map1.keySet()){
@@ -53,9 +51,6 @@ class Solution {
                 return false;
             }
         }
-        
-        
-        
         return true;
     }
 }
