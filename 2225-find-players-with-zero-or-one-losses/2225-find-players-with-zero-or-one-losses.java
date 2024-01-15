@@ -1,6 +1,5 @@
 class Solution {
     public List<List<Integer>> findWinners(int[][] matches) {
-        Map<Integer,Integer> loserMap = new HashMap<>();
         TreeSet<Integer> winner = new TreeSet<>();
         TreeSet<Integer> loser = new TreeSet<>();
         TreeSet<Integer> loser1 = new TreeSet<>();
